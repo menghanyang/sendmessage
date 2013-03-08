@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  telnum: MyText
+  message: MyString
+  sendtype: 1
+  sendnum: 1
+  sendtime: 
+
+two:
+  telnum: MyText
+  message: MyString
+  sendtype: 1
+  sendnum: 1
+  sendtime: 

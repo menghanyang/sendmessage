@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Sendmessage</title>
+    <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= stylesheet_link_tag    "groundwork", :media => "all" %>
+  <%= javascript_include_tag "modernizr","groundwork", "jquery" %>
+  <!--[if IE]>
+  <%= stylesheet_link_tag    "groundwork-ie", :media => "all" %>
+  <![endif]-->
+  <!--[if lt IE 9]>
+  <%= javascript_include_tag "html5shiv.min" %>
+  <![endif]-->
+  <!--[if IE 7]>
+  <link type="text/css" rel="stylesheet" href="./css/font-awesome-ie7.min.css">
+  <%= javascript_include_tag "font-awesome-ie7-min" %>
+  <![endif]-->
+  <%= csrf_meta_tags %>
+   <script type="text/javascript">
+// extend Modernizr to have datauri test
+    (function(){
+      var datauri = new Image();
+      datauri.onerror = function() {
+	  Modernizr.addTest('datauri', function () { return false; });
+      };
+      datauri.onload = function() {
+	  Modernizr.addTest('datauri', function () { return (datauri.width == 1 && datauri.height == 1); });
+	  Modernizr.load({
+	    test: Modernizr.datauri,
+	    nope: './css/no-datauri.css'
+	  });
+      };
+      datauri.src = "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==";
+    })();
+    // fallback if SVG unsupported
+    Modernizr.load({
+      test: Modernizr.inlinesvg,
+      nope: [
+	'./css/no-svg.css'
+      ]
+    });
+    // polyfill for HTML5 placeholders
+    Modernizr.load({
+      test: Modernizr.input.placeholder,
+      nope: [
+	'./css/placeholder_polyfill.css',
+	'./js/libs/placeholder_polyfill.jquery.js'
+      ]
+    });
+  </script>
+</head>
+<body>
+
+<%= yield %>
+
+</body>
+</html>
