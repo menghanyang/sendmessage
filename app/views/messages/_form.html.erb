@@ -11,92 +11,43 @@
     </div>
   <% end %>
   <div class="container">
-    <header class="white band padded">
-      <div><img src="/dxpt.png" style="width:20%;"></div><big>Welcome menghy! <span style="color: red;">balance is 34569.</span></big>
-
-      <div class="pull-right">
-	<nav class="inline">
-	  <ul>
-	    <li><a class="modal button" href="http://placekitten.com/" title="查看我的信息">我的信息</a></li>
-
-	    <li><a href="#nowhere" title="q">退出</a></li>
-	  </ul>
-	</nav>
-      </div>
-      <hr>
-
-      <div class="pull-left">
-	<nav class="inline">
-	  <ul>
-
-	    <li><a href="#nowhere" title="g;">发送短信</a></li>
-
-	    <li><a href="#nowhere" title="gg;">发送记录</a></li>
-
-	    <li><a href="#nowhere" title="g;">费用明细</a></li>
-
-	    <li><a href="#nowhere" title="g">我的客户</a></li>
-	  </ul>
-	</nav>
-      </div>
-    </header>
-  </div>
-
-  <div class="container">
     <div class="row">
       <div class="one whole padded">
-
 	  <fieldset>
 	    <legend></legend>
-
-
 	    <div class="row">
 	      <div class="one half padded">
-		<label for="message">gg</label> 
-		<textarea id="message" placeholder="please input tel num..">		</textarea> 
-		<%= f.text_area :telnum  %>
-		<%= text_area_tag(:telnum, "lllll") %>
-     <label for="name">g</label>
+		       <label for="message">发送号码</label> 
+	        	<%= f.text_area :telnum  %>
+            <label for="name">100个号码，32个有效号码</label>
 	      </div>
-
 	      <div class="one fourth padded">
-		<span>&nbsp;</span>
-		<p><a class="modal button" href="http://placekitten.com/">b</a></p>
-		<p><a class="modal button" href="http://placekitten.com/">b</a></p>
+		     <span>&nbsp;</span>
+	      	<p><a class="modal button" href="http://placekitten.com/">通讯录导入<i class="icon-external-link"></i></a></p>
+		      <p><a class="modal button" href="http://placekitten.com/">文件导入</a></p>
 	      </div>
 	    </div>
 
 	    <div class="row">
 	      <div class="one half padded">
-		<label for="message">jhg</label>
-		<textarea name="textarea" id="textarea" placeholder="gggg228;hj...">
-        </textarea>
-		<label for="name">jhg</label>
+		<label for="message">发送内容</label>
+		<%= f.text_area :message  %>
+			<label for="name">120个字</label>
 	      </div>
-
 	      <div class="one fourth padded">
 		<span>&nbsp;</span>
-
-		<p><a class="modal button" href="http://placekitten.com/">g;j</a></p>
+		<p><a class="modal button" href="http://placekitten.com/">使用过的内容</a></p>
 	      </div>
 	    </div>
-
-	    <div class="row">
-	      <p><label for="message">b<span class="radio-list" style="margin-left: 2em">
-	        <input type="radio" id="thing1" name="things" checked>
-b
-<input type="radio" id="thing2" name="things">
-b </span><span class="radio-list" style="margin-left: 2em">
-<input name="text" type="text" placeholder="2012-12-24 23:15:45">
-</span></label>
-	      </p>
-
-	      <div style="margin-left: 2em" class="radio-list"></div>
-	    </div>
-
+                  <div class="row">
+                  <div class="one whole padded">
+                    <input type="checkbox" name="things" checked=""> 定时发送!
+                    <input name="time" type="text">
+                  </div>
+                </div>
 	    <div class="row">
 	      <div class="one whole padded">
-		<button>Submit</button>
+		<button>发送</button>
 	      </div>
 	    </div>
 	  </fieldset>
@@ -106,26 +57,5 @@ b </span><span class="radio-list" style="margin-left: 2em">
     </div>
   </div>
 
-  <div class="container">
-    <footer class="footer align-right">
-      <p>&#169; 2013 Gary Hepting. Free to use, but <a href="mailto:groundwork@sidereel.com">give me a shout</a> if you find GroundworkCSS extremely useful!</p>
-    </footer>
-  </div><!-- scripts -->
-  <script type="text/javascript" src="./js/plugins/jquery.orbit-1.4.0.js">
-</script><script type="text/javascript" src="./js/groundwork.js">
-</script><!-- google analytics -->
-  <script type="text/javascript">
-
-    var _gaq = _gaq || [];
-    _gaq.push(['_setAccount', 'UA-XXXXXXXX-X']);
-    _gaq.push(['_trackPageview']);
-
-    (function() {
-      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-    })();
-
-  </script>
-
+  
  
